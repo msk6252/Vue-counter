@@ -1,7 +1,8 @@
 <template>
   <div>
-    <button @click="increment()">{{counter}}</button>
-    <button @click="reset()">reset</button>
+    <button @click="increment()">＋</button>
+    <button @click="reset()">{{counter}}</button>
+    <button @click="decrement()">ー</button>
   </div>
 </template>
 
@@ -18,6 +19,11 @@ export default {
     },
     reset () {
       this.counter = 0
+    },
+    decrement () {
+      if (this.counter > 0) {
+        this.counter -= 1
+      }
     }
   }
 }
